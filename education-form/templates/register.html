@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response</title>
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            background: url('https://images.unsplash.com/photo-1577552579668-a05080e1f2df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+        }
+        #header {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+            background: transparent;
+            margin: auto;
+
+        }
+        #nav1 {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0;
+            width: 38%;
+            list-style: none;
+            font-size: 2rem;
+
+        }
+        
+        #htxt {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22%;
+            font-size: 3rem;
+        }
+
+        #nav2 {
+            display: flex;
+            justify-content: space-evenly;
+            width: 38%;
+            padding: 0;
+            list-style: none;
+            font-size: 2rem;
+        }
+
+        #fr1 .adj {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        #fr1 .adj{
+            width: 30%;
+            height: 3rem;
+            border-radius: 40px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: #2f3640;
+            opacity: .8;
+            margin-top: .5rem;
+            color: white;
+        }
+
+        
+        #fr1 .adj1{
+            width: 20%;
+            height: 3rem;
+            border-radius: 40px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: #0d131f;
+            opacity: .8;
+            margin-top: 1rem;
+            color: white;
+        }
+
+        #fr1 .adj1 {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        ol li a { 
+            text-decoration: none;
+            color: hotpink; 
+        }
+    </style> 
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+    <div id="header">
+        <ul id="nav1">
+            <li>Home</li>
+            <li>Courses</li>
+            <li>Offers</li>
+            <li>Lectures</li>
+        </ul>
+        <div id="htxt">EducationHub</div>
+        <ul id="nav2">
+            <li>Information</li>
+            <li>Offers</li>
+            <li>About</li>
+            <li>Contacts</li>
+        </ul>
+    </div>
+
+    <div id="fr1">
+        <form action="register" methot="post">
+        {% csrf_token %}
+        <input class="adj" type="text" name="first_name" placeholder="First Name"><br>
+        <input class="adj" type="text" name="last_name" placeholder="Last Name"><br>
+        <input class="adj" type="text" name="User_name" placeholder="User Name"><br>
+        <input class="adj" type="email" name="email" placeholder="Email"><br>
+        <input class="adj" type="password1" name="password" placeholder="Password"><br>
+        <input class="adj" type="password2" name="confirm_password" placeholder="Confirm Password"><br>
+        <button class="adj1" type="submit"> Submit </button>
+        </form>
+    </div>
+
+    <!-- <ol>
+        {% for i in ac %}
+            <li><h2><a href="/{{x.id}}/">{{i.course_name}} {{i.inst_name}}</h2></a></li>
+        {% endfor %}
+    </ol> -->
+</body>
+</html>
